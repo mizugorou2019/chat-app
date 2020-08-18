@@ -12,7 +12,9 @@
 </div>
 
 <div class="messages">
-  <div class="message">
+  <%= render partial: 'message', collection: @messages %>
+<!-- ここから削除する -->
+  <%# <div class="message">
     <div class= "upper-message">
       <div class= "message-user">
         Tom
@@ -42,8 +44,8 @@
         こんばんは
       </div>
     </div>
-  </div>
-
+  </div> %>
+<!-- ここまで -->
 </div>
 
 <%= form_with model: [@room, @message], html: {class: "form"}, local: true do |f| %>
